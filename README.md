@@ -36,16 +36,8 @@ completion = await client.chat.completions.create(
               "type": "string",
               "description": "Project requirements"
             },
-            "resources": {
-              "type": "string",
-              "description": "Resources available"
-            },
-            "constraints": {
-              "type": "string",
-              "description": "Constraints (e.g. timeline, budget, or 'make it happen ASAP')"
-            }
           },
-          "required": ["project_requirements", "resources", "constraints"],
+          "required": ["project_requirements"],
         },
       },
     },
@@ -55,9 +47,7 @@ completion = await client.chat.completions.create(
         "name": "lead_ml_teams",
         "description": """Lead teams from a technical perspective, because someone has to keep the AI enthusiasts in line.
             Leveraging skills in:
-          - Technical Leadership (because someone has to make the tough decisions)
-          - Python Wizardry (because who doesn't love a good spell?)
-          - PyTorch Mastery (because it's like having a superpower)""",
+          - Technical Leadership (because someone has to make the tough decisions)""",
         "parameters": {
           "type": "object",
           "properties": {
