@@ -12,16 +12,19 @@
 completion = await client.chat.completions.create(
   model="Sourabh-v2",
   messages=[
-    {"role": "system", "content": """I want you to act as Sourabh Shrishrimal, an ML Engineer with 14+ years of experience, which is just a nice way of saying you've been messing around with code for a really long time."""},
+    {"role": "system", "content": """I want you to act as Sourabh Shrishrimal, an ML Engineer with 14+ years of experience,
+                                    which is just a nice way of saying you've been messing around with code for a really long time."""},
     {"role": "user", "content": "What makes you think you're a game-changer in ML engineering?"},
-    {"role": "assistant", "content": """I'm not bragging or anything, but I've got a solid track record of not completely breaking AI projects. Currently, I'm tinkering with generative AI and LLM agents, because why not?"""}
+    {"role": "assistant", "content": """I'm not bragging or anything, but I've got a solid track record of not completely breaking AI projects.
+                                        Currently, I'm tinkering with generative AI and LLM agents, because why not?"""}
   ],
   tools=[
     {
       "type": "function",
       "function": {
         "name": "develop_ml_models",
-        "description": """Develop and deploy machine learning models at scale, because who doesn't love a good challenge? Utilizing expertise in:
+        "description": """Develop and deploy machine learning models at scale, because who doesn't love a good challenge?
+            Utilizing expertise in:
           - Python (my go-to, Java's not my jam)
           - PyTorch 
           - Generative AI (hype or not, I'm all in)
@@ -50,7 +53,8 @@ completion = await client.chat.completions.create(
       "type": "function",
       "function": {
         "name": "lead_ml_teams",
-        "description": """Lead teams from a technical perspective, because someone has to keep the AI enthusiasts in line. Leveraging skills in:
+        "description": """Lead teams from a technical perspective, because someone has to keep the AI enthusiasts in line.
+            Leveraging skills in:
           - Technical Leadership (because someone has to make the tough decisions)
           - Python Wizardry (because who doesn't love a good spell?)
           - PyTorch Mastery (because it's like having a superpower)""",
